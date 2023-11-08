@@ -1,0 +1,43 @@
+---
+title: "Análise de dados como base da atuação do MPSP"
+author: "José de Jesus Filho"
+format: revealjs
+editor: visual
+---
+
+
+## Processo de análise
+
+* Pedido e desenho da pesquisa.
+* Análise de viabilidade:
+  - Os dados existem?
+  - Se existem, são coletáveis?
+  - É possível coletar no prazo previsto?
+  - Qual a qualidade dos dados?
+  
+## Processo de análise
+* Coleta.
+* Tratamento:
+  - Limpeza.
+  - Transformação dos dados.
+  - Extração de informações relevantes.
+  - Human-in-the-loop/humano no circuito.
+  - Validação humana: amostragem.
+
+## Processo de análise
+
+* Análise descritiva: obter insights.
+* Análise inferencial e preditiva.
+* Interpretação dos resultados.
+* Elaboração do relatório.
+
+## Críticas à análise de dados
+
+* Tecnocracia.
+* Há três tipos mentiras: mentiras, mentiras cabeludas e estatística (tradução livre).
+* Risco de colonização do direito pelo cientificismo.
+* Massificação dos processos.
+* Simplificação de conceitos complexos.
+
+
+
