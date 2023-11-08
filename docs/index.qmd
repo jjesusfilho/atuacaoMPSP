@@ -5,39 +5,71 @@ format: revealjs
 editor: visual
 ---
 
+## 
+
+![](qrcode.png)
+
+## Jurimetria: conceitos
+
+-   Ciência de dados aplicada ao Direito
+-   Abordagem probabilística do Direito
+-   Pesquisa quantitativa em Direito
+
+## Dimensões da jurimetria:
+
+```{r fig.height=7, fig.width=7}
+
+library(ggdag)
+library(ggplot2)
+set.seed(839)
+dagify(Direito ~ Estatistica, Direito ~ Programacao, Estatistica ~ Programacao, 
+       exposure = "Direito") |> 
+   ggdag(node_size = 30, stylized = T) +
+   theme_dag()
+```
+
+## Virada empírica
+
+-   Processo eletrônico.
+-   Capacidade de processamento.
+-   Internet.
 
 ## Processo de análise
 
-* Pedido e desenho da pesquisa.
-* Análise de viabilidade:
-  - Os dados existem?
-  - Se existem, são coletáveis?
-  - É possível coletar no prazo previsto?
-  - Qual a qualidade dos dados?
-  
-## Processo de análise
-* Coleta.
-* Tratamento:
-  - Limpeza.
-  - Transformação dos dados.
-  - Extração de informações relevantes.
-  - Human-in-the-loop/humano no circuito.
-  - Validação humana: amostragem.
+-   Pedido e desenho da pesquisa.
+-   Análise de viabilidade:
+    -   Os dados existem?
+    -   Se existem, são coletáveis?
+    -   É possível entregar a análise no prazo previsto?
+    -   Qual a qualidade dos dados?
 
 ## Processo de análise
 
-* Análise descritiva: obter insights.
-* Análise inferencial e preditiva.
-* Interpretação dos resultados.
-* Elaboração do relatório.
+-   Coleta.
+-   Tratamento:
+    -   Limpeza.
+    -   Transformação dos dados.
+    -   Extração de informações relevantes.
+    -   Human-in-the-loop/humano no circuito.
+    -   Validação humana: amostragem.
+
+## Processo de análise
+
+-   Análise descritiva: obter insights.
+-   Análise inferencial e preditiva.
+-   Interpretação dos resultados.
+-   Elaboração do relatório.
 
 ## Críticas à análise de dados
 
-* Tecnocracia.
-* Há três tipos mentiras: mentiras, mentiras cabeludas e estatística (tradução livre).
-* Risco de colonização do direito pelo cientificismo.
-* Massificação dos processos.
-* Simplificação de conceitos complexos.
+-   Tecnocracia.
+-   Há três tipos mentiras: mentiras, mentiras cabeludas e estatística (tradução livre).
+-   Risco de colonização do direito pelo cientificismo.
+-   Massificação dos processos.
+-   Simplificação de conceitos complexos.
+-   Uso de dados para corroborar tese processual.
 
+## Desafios
 
-
+-   Dados abertos.56
+-   Reprodutibilidade.

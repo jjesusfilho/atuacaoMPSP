@@ -335,6 +335,30 @@ José de Jesus Filho
 </div>
 
 </section>
+<section id="section" class="slide level2">
+<h2></h2>
+
+<img data-src="qrcode.png" class="r-stretch"></section>
+<section id="jurimetria-conceitos" class="slide level2">
+<h2>Jurimetria: conceitos</h2>
+<ul>
+<li>Ciência de dados aplicada ao Direito</li>
+<li>Abordagem probabilística do Direito</li>
+<li>Pesquisa quantitativa em Direito</li>
+</ul>
+</section>
+<section id="dimensões-da-jurimetria" class="slide level2">
+<h2>Dimensões da jurimetria:</h2>
+
+<img data-src="index_files/figure-revealjs/unnamed-chunk-1-1.png" width="672" class="r-stretch"></section>
+<section id="virada-empírica" class="slide level2">
+<h2>Virada empírica</h2>
+<ul>
+<li>Processo eletrônico.</li>
+<li>Capacidade de processamento.</li>
+<li>Internet.</li>
+</ul>
+</section>
 <section id="processo-de-análise" class="slide level2">
 <h2>Processo de análise</h2>
 <ul>
@@ -343,7 +367,7 @@ José de Jesus Filho
 <ul>
 <li>Os dados existem?</li>
 <li>Se existem, são coletáveis?</li>
-<li>É possível coletar no prazo previsto?</li>
+<li>É possível entregar a análise no prazo previsto?</li>
 <li>Qual a qualidade dos dados?</li>
 </ul></li>
 </ul>
@@ -379,6 +403,14 @@ José de Jesus Filho
 <li>Risco de colonização do direito pelo cientificismo.</li>
 <li>Massificação dos processos.</li>
 <li>Simplificação de conceitos complexos.</li>
+<li>Uso de dados para corroborar tese processual.</li>
+</ul>
+</section>
+<section id="desafios" class="slide level2">
+<h2>Desafios</h2>
+<ul>
+<li>Dados abertos.56</li>
+<li>Reprodutibilidade.</li>
 </ul>
 <div class="footer footer-default">
 
@@ -595,6 +627,44 @@ José de Jesus Filho
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
